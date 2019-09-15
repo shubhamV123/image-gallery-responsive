@@ -56,10 +56,7 @@ class Layout extends Component {
     );
   };
   handleScroll = () => {
-    if (
-      window.innerHeight + window.scrollY + 200 >=
-      document.body.offsetHeight
-    ) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       this.loadMore();
     }
   };
