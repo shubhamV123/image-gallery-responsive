@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "react-graceful-image";
-
+import convertUrlToSpecificWidth from "../utils/converUrlToSpecificWidth";
 const columnClassName = {
   3: "col-4 col-lg-4",
   4: "col-3 col-md-3",
@@ -16,7 +16,7 @@ const RenderColumn = ({ activeCardCount, image }) => {
     >
       <div className="gallery-thumb image-card">
         <Image
-          src={`${image.download_url}`}
+          src={`${convertUrlToSpecificWidth(image.download_url)}`}
           alt="My awesome image"
           className="grid-image"
           placeholderColor={colours[Math.floor(Math.random() * colours.length)]}
